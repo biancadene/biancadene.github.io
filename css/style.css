@@ -26,7 +26,7 @@ h1{font-family:"Bebas Neue",sans-serif;font-size:clamp(4.5rem,9vw,8.5rem);line-h
 .hero-right{display:flex;flex-direction:column;gap:1rem}
 .photo-frame{width:100%;aspect-ratio:16/9;border-radius:4px;overflow:hidden;position:relative}
 .photo-frame::after{content:"";position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--neon),var(--coral),var(--lav))}
-.photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
+.photo-frame img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
 .hero-cap{font-size:0.7rem;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase}
 .mq{overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1rem 0;background:var(--plum-mid)}
 .mq-track{display:flex;animation:mq 24s linear infinite;width:max-content}
@@ -82,12 +82,12 @@ h2{font-family:"Playfair Display",serif;font-size:clamp(2rem,4vw,3.25rem);font-w
 .gl{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(26,14,43,0.9));color:rgba(255,255,255,0.9);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;padding:1.5rem 0.75rem 0.75rem;opacity:0;transition:opacity 0.3s;line-height:1.4}
 .gi:hover .gl{opacity:1}
 .gi:first-child{grid-column:span 2;aspect-ratio:2/1}
-.gi:nth-child(6){grid-column:span 2;aspect-ratio:2/1}
+.gi:nth-child(5){grid-column:span 2;aspect-ratio:2/1}
 .about-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:6rem;align-items:start}
 .about-left{position:sticky;top:8rem}
 .photo-block{width:100%;aspect-ratio:16/9;border-radius:4px;overflow:hidden;position:relative;margin-bottom:1.5rem}
 .photo-block::after{content:"";position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--neon),var(--coral),var(--lav))}
-.photo-block img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
+.photo-block img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
 .about-name{font-family:"Bebas Neue",sans-serif;font-size:1.5rem;letter-spacing:0.06em;margin-bottom:0.2rem}
 .about-role{font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--neon);margin-bottom:0.4rem}
 .about-cert{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:1.5rem}
