@@ -64,7 +64,7 @@ h2{font-family:"Playfair Display",serif;font-size:clamp(2rem,4vw,3.25rem);font-w
 .wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:2px}
 .wi{background:var(--plum);border:1px solid var(--border);display:flex;flex-direction:column;border-radius:3px;overflow:hidden;transition:background 0.2s,border-color 0.2s}
 .wi:hover{background:var(--plum-mid);border-color:rgba(255,255,255,0.2)}
-.wi-img{width:100%;height:150px;object-fit:cover;object-position:center 65%;display:block;flex-shrink:0}
+.wi-img{width:100%;height:160px;object-fit:contain;object-position:center center;background:var(--plum-mid);display:block;flex-shrink:0}
 .wi-body{padding:1.75rem;display:flex;flex-direction:column;gap:0.75rem;flex:1}
 .wi-cat{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase}
 .wi-title{font-family:"Bebas Neue",sans-serif;font-size:1.6rem;letter-spacing:0.04em;line-height:1}
