@@ -81,8 +81,7 @@ h2{font-family:"Playfair Display",serif;font-size:clamp(2rem,4vw,3.25rem);font-w
 .gi:hover img{transform:scale(1.06)}
 .gl{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(26,14,43,0.9));color:rgba(255,255,255,0.9);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;padding:1.5rem 0.75rem 0.75rem;opacity:0;transition:opacity 0.3s;line-height:1.4}
 .gi:hover .gl{opacity:1}
-.gi:first-child{grid-column:span 2;aspect-ratio:2/1}
-.gi:nth-child(5){grid-column:span 2;aspect-ratio:2/1}
+
 .about-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:6rem;align-items:start}
 .about-left{position:sticky;top:8rem}
 .photo-block{width:100%;aspect-ratio:16/9;border-radius:4px;overflow:hidden;position:relative;margin-bottom:1.5rem}
