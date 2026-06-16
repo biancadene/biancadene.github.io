@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bianca Dene Williams — Teacher. Designer. Builder.</title>
-<meta name="description" content="Portfolio of Bianca Dene Williams — ESL teacher, UX designer, and front-end developer. Building real tools from real problems. CalArts Web Design Certificate 2026.">
-<meta property="og:title" content="Bianca Dene Williams — Teacher. Designer. Builder.">
-<meta property="og:description" content="Portfolio of Bianca Dene Williams — ESL teacher, UX designer, and front-end developer. Building real tools from real problems. CalArts Web Design Certificate 2026.">
+<title>Bianca Dene Williams — UX Designer & Front-End Developer</title>
+<meta name="description" content="Portfolio of Bianca Dene Williams — UX designer and front-end developer. 15 years of human behavior research, now in pixels. CalArts Web Design Certificate 2026.">
+<meta property="og:title" content="Bianca Dene Williams — UX Designer & Front-End Developer">
+<meta property="og:description" content="Portfolio of Bianca Dene Williams — UX designer and front-end developer. 15 years of human behavior research, now in pixels. CalArts Web Design Certificate 2026.">
 <meta property="og:url" content="https://biancadene.github.io">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://biancadene.github.io/images/photo.jpg">
@@ -16,10 +16,13 @@
 </head>
 <body>
 
-<nav>
+<a href="#work" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Main navigation">
   <a href="#" class="nav-logo">BDW</a>
   <ul class="nav-links">
     <li><a href="#work">Work</a></li>
+    <li><a href="#process">Process</a></li>
     <li><a href="#all">All Projects</a></li>
     <li><a href="#world">The World</a></li>
     <li><a href="#services">Hire Me</a></li>
@@ -27,16 +30,20 @@
   </ul>
 </nav>
 
-<section class="hero">
+<section class="hero" aria-label="Introduction">
   <div class="hero-bg">BDW</div>
   <div class="hero-left">
-    <div class="hero-tag">&#10022; Portfolio 2026</div>
+    <div class="hero-tags">
+      <div class="hero-avail"><span class="avail-dot"></span> Open to full-time &amp; contract roles</div>
+      <div class="hero-tag">Portfolio 2026</div>
+    </div>
     <h1>
       <span class="l1">Teacher.</span>
       <span class="l2">Designer.</span>
       <span class="l3">Builder.</span>
     </h1>
-    <p class="hero-sub">Fifteen years in classrooms taught me how people learn. Working in multimedia labs taught me how to build. Everything here started with a real problem I witnessed firsthand.</p>
+    <div class="hero-role">UX Designer &middot; Front-End Developer</div>
+    <p class="hero-sub">15 years of human behavior research, now in pixels. I design for the people the defaults forget — and I ship the code to prove it.</p>
     <div class="ctas">
       <a href="#work" class="btn-p">View my work</a>
       <a href="#services" class="btn-g">Work with me</a>
@@ -44,9 +51,9 @@
   </div>
   <div class="hero-right">
     <div class="photo-frame">
-      <img src="images/photo.jpg" alt="Bianca Dene Williams">
+      <img src="images/photo.jpg" alt="Bianca Dene Williams" loading="eager">
     </div>
-    <div class="hero-cap">Bianca Dene Williams</div>
+    <div class="hero-cap">Bianca Dene Williams &mdash; CalArts Web Design Certificate 2026</div>
   </div>
 </section>
 
@@ -73,7 +80,7 @@
   </div>
 </div>
 
-<section class="section section-alt" id="work">
+<section class="section section-alt" id="work" aria-label="Selected work">
   <div class="sec-hdr reveal"><span class="sec-num">01</span><h2>Selected Work</h2></div>
   <div class="pstack">
 
@@ -87,6 +94,10 @@
         <div class="ptitle">Genki Dojo</div>
         <div class="pline">"One app. Everything you need for Genki I."</div>
         <div class="pdesc">A free, open-source study companion for Genki I Japanese learners. All 12 lessons — grammar, vocabulary, kana drills, and speaking practice — offline-ready. No login. No cost.</div>
+        <div class="poutcome">
+          <div class="pout-item"><span class="pout-label">Problem</span> Genki I learners had no single, free, offline-capable study tool — just scattered PDFs and paywalled apps.</div>
+          <div class="pout-item"><span class="pout-label">Outcome</span> All 12 lessons, zero cost, installable offline — a full course in one app used by learners internationally.</div>
+        </div>
         <div class="ptags"><span class="ptag">HTML CSS JS</span><span class="ptag">Open Source</span><span class="ptag">Offline</span><span class="ptag">Education</span></div>
         <div class="plinks">
           <a href="https://genki-dojo.netlify.app/" target="_blank" class="pl ln">Live App</a>
@@ -106,6 +117,10 @@
         <div class="ptitle">Classroom Kitchen</div>
         <div class="pline">"No student goes hungry today."</div>
         <div class="pdesc">A delivery-first food service built for schools. Full UX process — personas, sitemap, wireframes, mood board, and a working deployed site. Hot bento meals ordered directly to classrooms in seconds.</div>
+        <div class="poutcome">
+          <div class="pout-item"><span class="pout-label">Problem</span> Students losing class time navigating complex lunch systems — or going without because the process was too hard.</div>
+          <div class="pout-item"><span class="pout-label">Outcome</span> End-to-end UX from research to deployed site — food ordering reduced to a 3-step flow with full Behance case study.</div>
+        </div>
         <div class="ptags"><span class="ptag">UX UI</span><span class="ptag">HTML CSS JS</span><span class="ptag">Food Equity</span><span class="ptag">CalArts</span></div>
         <div class="plinks">
           <a href="https://classroomkitchen.netlify.app/" target="_blank" class="pl lc">Live Site</a>
@@ -117,7 +132,7 @@
 
     <div class="pcard reveal d2">
       <div class="pvis pvis-ma" style="padding:0;">
-        <img src="images/matrescence.jpg" alt="Matrescence" style="width:100%;height:100%;object-fit:cover;" >
+        <img src="images/matrescence.jpg" alt="Matrescence" style="width:100%;height:100%;object-fit:cover;">
         <div class="pbar"></div>
       </div>
       <div class="pcont">
@@ -125,6 +140,10 @@
         <div class="ptitle">Matrescence</div>
         <div class="pline">"Every pregnancy app tracks the baby. Matrescence tracks the mother."</div>
         <div class="pdesc">For mothers navigating the aftermath of traumatic pregnancy and postpartum — for the moment the shock wears off and nobody around her has noticed yet.</div>
+        <div class="poutcome">
+          <div class="pout-item"><span class="pout-label">Problem</span> Every pregnancy app tracks the baby. No app addresses the psychological aftermath of traumatic pregnancy for the mother.</div>
+          <div class="pout-item"><span class="pout-label">Outcome</span> Full UX concept — user research, information architecture, Figma prototype, and published case study on Behance.</div>
+        </div>
         <div class="ptags"><span class="ptag">Figma</span><span class="ptag">Mobile UX</span><span class="ptag">Women's Health</span><span class="ptag">Concept</span></div>
         <div class="plinks">
           <a href="https://www.behance.net/gallery/228005005/Matrescence-Maternal-Wellness-Recovery-App" target="_blank" class="pl ll">Case Study</a>
@@ -135,23 +154,56 @@
   </div>
 </section>
 
-<section class="section" id="all">
+<section class="section section-process" id="process" aria-label="How I work">
+  <div class="sec-hdr reveal"><span class="sec-num">&#9678;</span><h2>How I work</h2></div>
+  <div class="proc-grid reveal">
+    <div class="proc-step">
+      <div class="proc-num">01</div>
+      <h3 class="proc-title">Discover</h3>
+      <p class="proc-desc">Research, stakeholder conversations, competitive review. I map the problem space before touching a wireframe.</p>
+    </div>
+    <div class="proc-step">
+      <div class="proc-num" style="color:var(--coral)">02</div>
+      <h3 class="proc-title">Define</h3>
+      <p class="proc-desc">Personas, user journeys, problem statements. I narrow scope to what actually matters to real people.</p>
+    </div>
+    <div class="proc-step">
+      <div class="proc-num" style="color:var(--lav)">03</div>
+      <h3 class="proc-title">Design</h3>
+      <p class="proc-desc">Figma for wireframes and high-fidelity. Hand-coded prototypes when static screens aren't enough.</p>
+    </div>
+    <div class="proc-step">
+      <div class="proc-num" style="color:var(--gold)">04</div>
+      <h3 class="proc-title">Deliver</h3>
+      <p class="proc-desc">Shipped code, not just specs. HTML, CSS, JavaScript, React — whatever the project needs to actually exist.</p>
+    </div>
+  </div>
+</section>
+
+<div class="testimonial-band reveal" aria-label="Client testimonial">
+  <div class="tb-inner">
+    <div class="tb-quote">&ldquo;Your work moved us forward. Your version actually pushed Susan and me to think harder about what our Theory of Change is trying to say.&rdquo;</div>
+    <div class="tb-attr">Susan &middot; Creshendo &middot; Migrant-led integration nonprofit</div>
+  </div>
+</div>
+
+<section class="section" id="all" aria-label="All projects">
   <div class="sec-hdr reveal"><span class="sec-num">02</span><h2>All Projects</h2></div>
   <div class="wgrid reveal">
 
-    <div class="wi">
-      <img class="wi-img" src="images/alchemist.jpg" alt="Alchemist">
+    <div class="wi wi-featured">
+      <img class="wi-img" src="images/alchemist.jpg" alt="Alchemist" loading="lazy">
       <div class="wi-body">
         <div class="wi-cat" style="color:var(--gold)">Productivity · Personality · Web App</div>
         <div class="wi-title">Alchemist</div>
-        <div class="wi-desc">A personality quiz built around five Jungian archetypes. Designed in Adobe Express and hand-coded in vanilla HTML, CSS and JavaScript. No frameworks, no dependencies.</div>
+        <div class="wi-desc">A personality quiz built around five Jungian archetypes. Hand-coded in vanilla HTML, CSS, and JavaScript. No frameworks, no dependencies.</div>
         <div class="wi-status"><span class="dot dl"></span> Live</div>
         <a href="https://thealchemistapp.netlify.app" target="_blank" class="wi-link">thealchemistapp.netlify.app</a>
       </div>
     </div>
 
     <div class="wi">
-      <img class="wi-img" src="images/botanica.jpg" alt="Botanica">
+      <img class="wi-img" src="images/botanica.jpg" alt="Botanica" loading="lazy">
       <div class="wi-body">
         <div class="wi-cat" style="color:var(--neon)">Lifestyle · E-commerce</div>
         <div class="wi-title">Botanica</div>
@@ -162,9 +214,9 @@
     </div>
 
     <div class="wi">
-      <img class="wi-img" src="images/greenlimit.jpeg" alt="GreenLimit">
+      <img class="wi-img" src="images/greenlimit.jpeg" alt="GreenLimit" loading="lazy">
       <div class="wi-body">
-        <div class="wi-cat" style="color:var(--neon)">Wellness · Health</div>
+        <div class="wi-cat" style="color:var(--neon)">Wellness · Health · PWA</div>
         <div class="wi-title">GreenLimit</div>
         <div class="wi-desc">Tracks medical marijuana purchase limits and remaining availability. Built with React and Vite. Installable as a PWA.</div>
         <div class="wi-status"><span class="dot dl"></span> Live</div>
@@ -172,8 +224,8 @@
       </div>
     </div>
 
-    <div class="wi">
-      <img class="wi-img" src="images/pivot.jpg" alt="Pivot">
+    <div class="wi wi-featured wi-featured-right">
+      <img class="wi-img" src="images/pivot.jpg" alt="Pivot" loading="lazy">
       <div class="wi-body">
         <div class="wi-cat" style="color:var(--gold)">Travel · Discovery · Web App</div>
         <div class="wi-title">Pivot</div>
@@ -184,7 +236,7 @@
     </div>
 
     <div class="wi">
-      <img class="wi-img" src="images/survival-japan.jpg" alt="Survival Japan">
+      <img class="wi-img" src="images/survival-japan.jpg" alt="Survival Japan" loading="lazy">
       <div class="wi-body">
         <div class="wi-cat" style="color:var(--neon)">Language · Travel</div>
         <div class="wi-title">Survival Japan</div>
@@ -195,7 +247,7 @@
     </div>
 
     <div class="wi">
-      <img class="wi-img" src="images/willow-fern.jpg" alt="Willow and Fern Spa">
+      <img class="wi-img" src="images/willow-fern.jpg" alt="Willow and Fern Spa" loading="lazy">
       <div class="wi-body">
         <div class="wi-cat" style="color:var(--peach)">Wellness · Spa</div>
         <div class="wi-title">Willow and Fern</div>
@@ -206,7 +258,7 @@
     </div>
 
     <div class="wi">
-      <img class="wi-img" src="images/yatai.jpg" alt="Yatai">
+      <img class="wi-img" src="images/yatai.jpg" alt="Yatai" loading="lazy">
       <div class="wi-body">
         <div class="wi-cat" style="color:var(--coral)">Travel · Food</div>
         <div class="wi-title">Yatai</div>
@@ -219,9 +271,9 @@
   </div>
 </section>
 
-<section class="section section-alt" id="world">
+<section class="section section-alt" id="world" aria-label="Mural work gallery">
   <div class="sec-hdr reveal"><span class="sec-num">03</span><h2>The world I build from</h2></div>
-  <p class="gal-intro reveal"><p class="gal-intro reveal">Six countries — France, Taiwan, French Guiana, New Zealand, Mexico, the United States. Fifteen years of teaching, painting walls, and watching how strangers read an image in two seconds. The same instincts shape every interface I design.</p>
+  <p class="gal-intro reveal">Six countries — France, Taiwan, French Guiana, New Zealand, Mexico, the United States. Fifteen years of teaching, painting walls, and watching how strangers read an image in two seconds. The same instincts shape every interface I design.</p>
   <div class="gal-grid reveal">
     <div class="gi"><img src="images/shipwreck.jpg" alt="Shipwreck Mural, Cozumel Mexico" loading="lazy"><div class="gl">Shipwreck · Cozumel, Mexico</div></div>
     <div class="gi"><img src="images/protect.jpg" alt="Protect What You Love mural" loading="lazy"><div class="gl">Protect What You Love · Mexico</div></div>
@@ -238,7 +290,7 @@
   </div>
 </section>
 
-<section class="section" id="services">
+<section class="section" id="services" aria-label="Services and working together">
   <div class="sec-hdr reveal"><span class="sec-num">04</span><h2>Working with me</h2></div>
   <p class="svc-lead reveal">I take on small projects where the goal is real and the people on the other side matter. Currently booking through 2026.</p>
   <div class="svc-grid reveal">
@@ -281,8 +333,8 @@
         </blockquote>
       </div>
     </div>
-    
-<div class="svc-featured">
+
+    <div class="svc-featured">
       <div class="svc-featured-img">
         <img src="images/sptc-impact-report.jpg" alt="Salud Para Todos Caribe 2025 Annual Report cover">
       </div>
@@ -293,7 +345,7 @@
         <p class="svc-featured-desc">Editorial concept for the 2025 annual report of a Costa Rican community health nonprofit serving the Bribri and Cabécar peoples of Talamanca. Geometric type treatment, integrated brand motifs, modular data layout.</p>
       </div>
     </div>
-    
+
     <div class="svc-recent-grid">
       <div class="svc-client">
         <div class="svc-client-status"><span class="dot dp"></span> In Progress</div>
@@ -310,7 +362,7 @@
   </div>
 </section>
 
-<section class="section section-alt" id="about">
+<section class="section section-alt" id="about" aria-label="About Bianca">
   <div class="sec-hdr reveal"><span class="sec-num">05</span><h2>About me</h2></div>
   <div class="about-grid">
     <div class="about-left reveal">
