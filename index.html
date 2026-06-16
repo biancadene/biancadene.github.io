@@ -28,7 +28,19 @@
     <li><a href="#services">Hire Me</a></li>
     <li><a href="#about">About</a></li>
   </ul>
+  <button class="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+  <a href="#work" class="mn-link">Work</a>
+  <a href="#process" class="mn-link">Process</a>
+  <a href="#all" class="mn-link">All Projects</a>
+  <a href="#world" class="mn-link">The World</a>
+  <a href="#services" class="mn-link">Hire Me</a>
+  <a href="#about" class="mn-link">About</a>
+  <a href="https://www.linkedin.com/in/biancadenewilliams/" target="_blank" class="mn-link mn-resume">&#8599; LinkedIn</a>
+</div>
 
 <section class="hero" aria-label="Introduction">
   <div class="hero-bg">BDW</div>
@@ -47,6 +59,7 @@
     <div class="ctas">
       <a href="#work" class="btn-p">View my work</a>
       <a href="#services" class="btn-g">Work with me</a>
+      <a href="https://www.linkedin.com/in/biancadenewilliams/" target="_blank" class="btn-r">&#8599; LinkedIn</a>
     </div>
   </div>
   <div class="hero-right">
@@ -273,7 +286,8 @@
 
 <section class="section section-alt" id="world" aria-label="Mural work gallery">
   <div class="sec-hdr reveal"><span class="sec-num">03</span><h2>The world I build from</h2></div>
-  <p class="gal-intro reveal">Six countries — France, Taiwan, French Guiana, New Zealand, Mexico, the United States. Fifteen years of teaching, painting walls, and watching how strangers read an image in two seconds. The same instincts shape every interface I design.</p>
+  <div class="gal-sub reveal">Muralist &middot; 6 countries &middot; The same eye that reads a wall reads a screen</div>
+  <p class="gal-intro reveal">France, Taiwan, French Guiana, New Zealand, Mexico, the United States. Fifteen years of teaching, painting walls, and watching how strangers read an image in two seconds. The same instincts shape every interface I design.</p>
   <div class="gal-grid reveal">
     <div class="gi"><img src="images/shipwreck.jpg" alt="Shipwreck Mural, Cozumel Mexico" loading="lazy"><div class="gl">Shipwreck · Cozumel, Mexico</div></div>
     <div class="gi"><img src="images/protect.jpg" alt="Protect What You Love mural" loading="lazy"><div class="gl">Protect What You Love · Mexico</div></div>
@@ -375,6 +389,7 @@
       <div class="socials">
         <a href="https://www.behance.net/biancawilliams" target="_blank" class="soc">&#8599; Behance</a>
         <a href="https://github.com/biancadene" target="_blank" class="soc">&#8599; GitHub</a>
+        <a href="https://www.linkedin.com/in/biancadenewilliams/" target="_blank" class="soc soc-resume">&#8599; LinkedIn</a>
         <a href="mailto:bianca.dene.williams@gmail.com" class="soc">&#8599; bianca.dene.williams@gmail.com</a>
       </div>
     </div>
@@ -383,6 +398,7 @@
       <p>My path into design and development started at the University of Arizona, where I worked in the campus multimedia labs. I needed to learn these skills to build things for the work I was doing and to support students with their own projects. What started as necessity became something I could not stop. I kept building.</p>
       <p>Over the years I have worked across education, UX, and front-end development, often all three at once. The projects here reflect that range: a Japanese study app built because the right tool did not exist, a school meal service born from watching hungry kids try to learn, a maternal health concept for the women nobody designs for. Every idea came from something real.</p>
       <p>I completed the <strong>CalArts Web Design Certificate Program</strong> in 2026. I build in HTML, CSS, JavaScript, React, and Figma. I work independently, move fast, and care deeply about the people on the other side of whatever I make.</p>
+      <p class="about-next"><strong>Currently exploring:</strong> design systems, accessibility auditing, and motion design for interfaces.</p>
     </div>
   </div>
 </section>
@@ -401,6 +417,22 @@ const io = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.08 });
 reveals.forEach(el => io.observe(el));
+
+const burger = document.querySelector(".nav-burger");
+const mobileNav = document.getElementById("mobile-nav");
+burger.addEventListener("click", () => {
+  const open = burger.getAttribute("aria-expanded") === "true";
+  burger.setAttribute("aria-expanded", !open);
+  burger.classList.toggle("open", !open);
+  mobileNav.classList.toggle("open", !open);
+  mobileNav.setAttribute("aria-hidden", open);
+});
+document.querySelectorAll(".mn-link").forEach(l => l.addEventListener("click", () => {
+  burger.setAttribute("aria-expanded", "false");
+  burger.classList.remove("open");
+  mobileNav.classList.remove("open");
+  mobileNav.setAttribute("aria-hidden", "true");
+}));
 </script>
 </body>
 </html>
