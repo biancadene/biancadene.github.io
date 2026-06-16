@@ -1,3 +1,8 @@
+Yes — the CSS on GitHub is outdated. It's missing all the new styles for the mobile nav, process section, testimonial band, LinkedIn button, and more. Without it the new sections will look broken.
+
+Here's the CSS to paste into `css/style.css`:
+
+```css
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 .skip-link{position:absolute;top:-100%;left:1rem;background:var(--neon);color:var(--ink);font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:8px 16px;border-radius:2px;text-decoration:none;z-index:999;transition:top 0.2s}
 .skip-link:focus{top:1rem}
@@ -196,3 +201,23 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   .proc-grid{grid-template-columns:1fr}
   .hero-tags{flex-direction:column;align-items:flex-start}
 }
+.btn-r{display:inline-flex;align-items:center;gap:0.5rem;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.55);font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:14px 22px;text-decoration:none;border-radius:2px;transition:border-color 0.2s,color 0.2s}
+.btn-r:hover{border-color:var(--neon);color:var(--neon)}
+.soc-resume{color:var(--neon) !important;margin-top:0.4rem}
+.gal-sub{font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.32);margin-bottom:1.25rem}
+.about-next{border-left:2px solid var(--neon);padding-left:1rem !important;margin-top:0.5rem}
+.about-next strong{color:var(--neon) !important}
+.nav-burger{display:none;flex-direction:column;justify-content:space-between;width:22px;height:15px;background:none;border:none;cursor:pointer;padding:0;flex-shrink:0}
+.nav-burger span{display:block;height:1.5px;background:var(--white);border-radius:1px;transition:transform 0.25s,opacity 0.25s}
+.nav-burger.open span:nth-child(1){transform:translateY(6.75px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-6.75px) rotate(-45deg)}
+.mobile-nav{display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:99;background:var(--ink);flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;padding:2rem}
+.mobile-nav.open{display:flex}
+.mn-link{font-family:"Bebas Neue",sans-serif;font-size:2.4rem;letter-spacing:0.06em;color:rgba(255,255,255,0.6);text-decoration:none;transition:color 0.2s}
+.mn-link:hover{color:var(--neon)}
+.mn-resume{font-size:1rem;letter-spacing:0.14em;color:var(--neon) !important;border:1px solid rgba(212,255,0,0.3);padding:10px 24px;border-radius:20px;margin-top:1rem}
+@media(max-width:900px){
+  .nav-burger{display:flex}
+}
+```
