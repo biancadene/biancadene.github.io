@@ -1,8 +1,3 @@
-Yes — the CSS on GitHub is outdated. It's missing all the new styles for the mobile nav, process section, testimonial band, LinkedIn button, and more. Without it the new sections will look broken.
-
-Here's the CSS to paste into `css/style.css`:
-
-```css
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 .skip-link{position:absolute;top:-100%;left:1rem;background:var(--neon);color:var(--ink);font-size:0.75rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:8px 16px;border-radius:2px;text-decoration:none;z-index:999;transition:top 0.2s}
 .skip-link:focus{top:1rem}
@@ -85,13 +80,6 @@ h2{font-family:"Playfair Display",serif;font-size:clamp(2rem,4vw,3.25rem);font-w
 .dl{background:var(--neon)}.dc{background:var(--coral)}.dp{background:var(--lav)}
 .wi-link{font-size:0.7rem;letter-spacing:0.06em;color:rgba(255,255,255,0.28);text-decoration:none;transition:color 0.2s}
 .wi-link:hover{color:var(--neon)}
-.gal-intro{font-family:"Playfair Display",serif;font-style:italic;font-size:1rem;line-height:1.8;color:rgba(255,255,255,0.55);max-width:60ch;margin-bottom:3rem}
-.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
-.gi{position:relative;overflow:hidden;aspect-ratio:1;cursor:pointer}
-.gi img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s ease;display:block}
-.gi:hover img{transform:scale(1.06)}
-.gl{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(26,14,43,0.9));color:rgba(255,255,255,0.9);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;padding:1.5rem 0.75rem 0.75rem;opacity:0;transition:opacity 0.3s;line-height:1.4}
-.gi:hover .gl{opacity:1}
 .about-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:6rem;align-items:start}
 .about-left{position:sticky;top:8rem}
 .photo-block{width:100%;aspect-ratio:16/9;border-radius:4px;overflow:hidden;position:relative;margin-bottom:1.5rem}
@@ -117,8 +105,6 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   .hero{grid-template-columns:1fr;padding:7rem 1.5rem 3rem;gap:2.5rem}
   .section{padding:4.5rem 1.5rem}
   .pcard{grid-template-columns:1fr}.pcard.flip{direction:ltr}.pvis{min-height:200px}
-  .gal-grid{grid-template-columns:repeat(2,1fr)}
-  .gi:first-child{grid-column:span 2}.gi:nth-child(6){grid-column:span 1;aspect-ratio:1}
   .about-grid{grid-template-columns:1fr;gap:2.5rem}.about-left{position:static}
   footer{flex-direction:column;gap:0.75rem;text-align:center}
 }
@@ -128,44 +114,6 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
 .ph-mark{font-family:"Bebas Neue",sans-serif;font-size:2.4rem;letter-spacing:0.08em;color:var(--neon);position:relative;z-index:1}
 .ph-mark-alt{color:var(--lav)}
 .ph-dot{width:6px;height:6px;border-radius:50%;background:var(--coral);position:relative;z-index:1}
-.svc-lead{font-family:"Playfair Display",serif;font-style:italic;font-size:1.1rem;line-height:1.75;color:rgba(255,255,255,0.6);max-width:60ch;margin-bottom:3.5rem}
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:4rem}
-.svc{background:var(--plum-mid);padding:2.5rem;display:flex;flex-direction:column;gap:0.9rem;border-radius:3px;transition:transform 0.2s,background 0.2s}
-.svc:hover{transform:translateY(-3px);background:rgba(61,37,85,0.85)}
-.svc-num{font-family:"Bebas Neue",sans-serif;font-size:1rem;letter-spacing:0.12em;color:var(--neon)}
-.svc-title{font-family:"Bebas Neue",sans-serif;font-size:1.8rem;letter-spacing:0.04em;line-height:1.05;font-weight:400;color:var(--white)}
-.svc-desc{font-size:0.92rem;line-height:1.7;color:rgba(255,255,255,0.55)}
-.svc-meta{font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.32);margin-top:0.75rem;border-top:1px solid var(--border);padding-top:1rem}
-.svc-recent{border-top:1px solid var(--border);padding-top:3rem}
-.svc-recent-label{font-family:"Bebas Neue",sans-serif;font-size:0.95rem;letter-spacing:0.16em;color:var(--neon);margin-bottom:1.75rem;text-transform:uppercase}
-.svc-recent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-.svc-client{background:var(--plum);border:1px solid var(--border);padding:1.75rem;display:flex;flex-direction:column;gap:0.6rem;border-radius:3px;min-height:170px}
-.svc-client-status{display:flex;align-items:center;gap:0.5rem;font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:0.25rem}
-.svc-client-title{font-family:"Bebas Neue",sans-serif;font-size:1.4rem;letter-spacing:0.04em;line-height:1.05}
-.svc-client-desc{font-size:0.82rem;line-height:1.65;color:rgba(255,255,255,0.45);flex:1}
-.svc-client-cta{background:linear-gradient(135deg,var(--plum-mid) 0%,rgba(212,255,0,0.05) 100%);border-color:rgba(212,255,0,0.18)}
-.svc-client-cta .pl{align-self:flex-start;margin-top:0.5rem}
-@media(max-width:900px){
-  .svc-grid{grid-template-columns:1fr}
-  .svc-recent-grid{grid-template-columns:1fr}
-}
-.svc-featured{display:grid;grid-template-columns:1.15fr 1fr;gap:2px;margin-bottom:2px;border-radius:3px;overflow:hidden;background:var(--plum-mid)}
-.svc-featured-img{background:var(--plum);min-height:420px;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:2.5rem;border:1px solid var(--border)}
-.svc-featured-img img{width:100%;height:auto;display:block;border-radius:3px;box-shadow:0 12px 36px rgba(0,0,0,0.35)}
-.svc-featured-body{padding:3rem;display:flex;flex-direction:column;gap:0.9rem;justify-content:center}
-.svc-featured-cat{font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--neon)}
-.svc-featured-title{font-family:"Bebas Neue",sans-serif;font-size:3.2rem;letter-spacing:0.04em;line-height:1;font-weight:400;color:var(--white)}
-.svc-featured-desc{font-size:0.95rem;line-height:1.75;color:rgba(255,255,255,0.6);margin-bottom:0.5rem}
-.svc-quote{border-left:2px solid var(--neon);padding-left:1.25rem;margin-top:0.5rem;display:flex;flex-direction:column;gap:0.65rem}
-.svc-quote-line{font-family:"Playfair Display",serif;font-style:italic;font-size:1.4rem;line-height:1.35;color:var(--white)}
-.svc-quote-sub{font-family:"Playfair Display",serif;font-style:italic;font-size:0.9rem;line-height:1.7;color:rgba(255,255,255,0.55)}
-.svc-quote-attr{font-style:normal;font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-top:0.5rem;display:block}
-@media(max-width:900px){
-  .svc-featured{grid-template-columns:1fr}
-  .svc-featured-img{min-height:240px;padding:1.5rem}
-  .svc-featured-body{padding:2rem 1.5rem}
-  .svc-featured-title{font-size:2.4rem}
-}
 .poutcome{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:0.25rem 0}
 .pout-item{background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:0.9rem 1rem;font-size:0.78rem;line-height:1.6;color:rgba(255,255,255,0.5);border-radius:2px}
 .pout-label{display:block;font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--neon);margin-bottom:0.35rem;font-weight:500}
@@ -182,6 +130,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
 .tb-quote::before{content:'\201C';color:var(--neon);margin-right:0.15em}
 .tb-quote::after{content:'\201D';color:var(--neon);margin-left:0.15em}
 .tb-attr{font-size:0.65rem;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.38)}
+.testimonial-band-alt{background:var(--ink);border-top:none}
 .wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
 .wi-featured{grid-column:span 2}
 .wi-featured .wi-img{height:220px;object-fit:cover}
@@ -203,8 +152,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
 }
 .btn-r{display:inline-flex;align-items:center;gap:0.5rem;border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.55);font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;padding:14px 22px;text-decoration:none;border-radius:2px;transition:border-color 0.2s,color 0.2s}
 .btn-r:hover{border-color:var(--neon);color:var(--neon)}
-.soc-resume{color:var(--neon) !important;margin-top:0.4rem}
-.gal-sub{font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.32);margin-bottom:1.25rem}
+.soc-resume{color:var(--neon) !important}
 .about-next{border-left:2px solid var(--neon);padding-left:1rem !important;margin-top:0.5rem}
 .about-next strong{color:var(--neon) !important}
 .nav-burger{display:none;flex-direction:column;justify-content:space-between;width:22px;height:15px;background:none;border:none;cursor:pointer;padding:0;flex-shrink:0}
@@ -217,7 +165,4 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
 .mn-link{font-family:"Bebas Neue",sans-serif;font-size:2.4rem;letter-spacing:0.06em;color:rgba(255,255,255,0.6);text-decoration:none;transition:color 0.2s}
 .mn-link:hover{color:var(--neon)}
 .mn-resume{font-size:1rem;letter-spacing:0.14em;color:var(--neon) !important;border:1px solid rgba(212,255,0,0.3);padding:10px 24px;border-radius:20px;margin-top:1rem}
-@media(max-width:900px){
-  .nav-burger{display:flex}
-}
-```
+@media(max-width:900px){.nav-burger{display:flex}}
