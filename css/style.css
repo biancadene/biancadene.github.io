@@ -87,8 +87,8 @@ h2{font-family:"Playfair Display",serif;font-size:clamp(2rem,4vw,3.25rem);font-w
 .photo-block img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
 .about-name{font-family:"Bebas Neue",sans-serif;font-size:1.5rem;letter-spacing:0.06em;margin-bottom:0.2rem}
 .about-role{font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--neon);margin-bottom:0.4rem}
-.about-cert{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:1.5rem}
-.socials{display:flex;flex-direction:column;gap:0.6rem}
+.about-cert{font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-bottom:0.4rem}
+.socials{display:flex;flex-direction:column;gap:0.6rem;margin-top:1rem}
 .soc{font-size:0.78rem;letter-spacing:0.06em;color:rgba(255,255,255,0.38);text-decoration:none;display:flex;align-items:center;gap:0.5rem;transition:color 0.2s}
 .soc:hover{color:var(--neon)}
 .about-body p{font-size:1rem;line-height:1.9;color:rgba(255,255,255,0.62);margin-bottom:1.5rem}
@@ -109,11 +109,6 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
   footer{flex-direction:column;gap:0.75rem;text-align:center}
 }
 .pvis img{width:100%;height:100%;object-fit:cover;display:block;position:absolute;top:0;left:0;}
-.wi-img-ph{width:100%;height:160px;background:linear-gradient(135deg,#1B2D1B 0%,#3D2555 100%);display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-shrink:0;position:relative;overflow:hidden}
-.wi-img-ph::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 50%,rgba(212,255,0,0.08),transparent 60%)}
-.ph-mark{font-family:"Bebas Neue",sans-serif;font-size:2.4rem;letter-spacing:0.08em;color:var(--neon);position:relative;z-index:1}
-.ph-mark-alt{color:var(--lav)}
-.ph-dot{width:6px;height:6px;border-radius:50%;background:var(--coral);position:relative;z-index:1}
 .poutcome{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:0.25rem 0}
 .pout-item{background:rgba(255,255,255,0.04);border:1px solid var(--border);padding:0.9rem 1rem;font-size:0.78rem;line-height:1.6;color:rgba(255,255,255,0.5);border-radius:2px}
 .pout-label{display:block;font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--neon);margin-bottom:0.35rem;font-weight:500}
@@ -133,7 +128,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
 .testimonial-band-alt{background:var(--ink);border-top:none}
 .wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
 .wi-featured{grid-column:span 2}
-.wi-featured .wi-img{height:220px;object-fit:cover}
+.wi-featured .wi-img{height:220px;object-fit:contain}
 .wi-featured-right{grid-column:2 / span 2}
 @supports (animation-timeline:view()){
   .sec-num{animation:num-slide linear both;animation-timeline:view();animation-range:entry 0% entry 35%}
