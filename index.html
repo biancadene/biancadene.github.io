@@ -324,8 +324,13 @@ $ cat /home/user/biancadene.github.io/index.html
 
 <footer>
   <span class="fn">Bianca Dene Williams</span>
-  <span>2026</span>
-  <span>Teacher · Designer · Builder</span>
+  <span>Teacher · Designer · Builder · 2026</span>
+  <div class="footer-links">
+    <a href="https://www.behance.net/biancawilliams" target="_blank">Behance</a>
+    <a href="https://github.com/biancadene" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/biancadenewilliams/" target="_blank">LinkedIn</a>
+    <a href="resume.html">Résumé</a>
+  </div>
 </footer>
 
 <script>
@@ -352,6 +357,19 @@ document.querySelectorAll(".mn-link").forEach(l => l.addEventListener("click", (
   mobileNav.classList.remove("open");
   mobileNav.setAttribute("aria-hidden", "true");
 }));
+
+const navLinks = document.querySelectorAll(".nav-links a[href^='#']");
+const sections = document.querySelectorAll("section[id]");
+const spy = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove("nav-active"));
+      const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+      if (active) active.classList.add("nav-active");
+    }
+  });
+}, { threshold: 0.3 });
+sections.forEach(s => spy.observe(s));
 </script>
 </body>
 </html>
