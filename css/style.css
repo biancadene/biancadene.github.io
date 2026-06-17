@@ -128,7 +128,7 @@ footer{border-top:1px solid var(--border);padding:2.5rem 3rem;display:flex;justi
 .testimonial-band-alt{background:var(--ink);border-top:none}
 .wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
 .wi-featured{grid-column:span 2}
-.wi-featured .wi-img{height:220px;object-fit:contain}
+.wi-featured .wi-img{height:160px;object-fit:contain}
 .wi-featured-right{grid-column:2 / span 2}
 @supports (animation-timeline:view()){
   .sec-num{animation:num-slide linear both;animation-timeline:view();animation-range:entry 0% entry 35%}
