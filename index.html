@@ -1286,10 +1286,10 @@ function renderD(n,data,el){
   const playBtn=document.createElement('button');playBtn.className='dial-play';playBtn.textContent='▶ Play full conversation';
   let playing=false;
   playBtn.onclick=()=>{
-    if(playing){speechSynthesis.cancel();playing=false;playBtn.textContent='▶ Play full conversation';playBtn.disabled=false;return;}
+    if(playing){speechSynthesis.cancel();playing=false;playBtn.textContent='▶ Play full conversation';return;}
+    if(!('speechSynthesis' in window))return;
     playing=true;playBtn.textContent='⏹ Stop';
     let i=0;
-    speechSynthesis.cancel();
     function playNext(){
       if(i>=lines.length||!playing){
         playing=false;playBtn.textContent='▶ Play full conversation';
@@ -1299,15 +1299,15 @@ function renderD(n,data,el){
       const line=lines[i];
       wrap.querySelectorAll('.dial-line').forEach((l,idx)=>l.style.opacity=idx===i?'1':'.45');
       i++;
-      if(!('speechSynthesis' in window))return;
       const u=new SpeechSynthesisUtterance(line.j);
       u.lang='ja-JP';u.rate=0.85;
       u.pitch=line.s==='A'?1.2:0.75;
-      u.onend=()=>{if(playing)setTimeout(playNext,420);};
+      u.onend=()=>{if(playing)setTimeout(playNext,400);};
       u.onerror=()=>{if(playing)setTimeout(playNext,800);};
       speechSynthesis.speak(u);
     }
-    setTimeout(playNext,150);
+    speechSynthesis.cancel();
+    setTimeout(playNext,250);
   };
   el.appendChild(playBtn);
 
